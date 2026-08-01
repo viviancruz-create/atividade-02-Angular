@@ -14,8 +14,7 @@ export class Hospedagem {
   addPessoa(){
 
     let pessoa = new Pessoa();
-    pessoa.idHospede = this.listaPessoa.
-    pessoa.valorConsumido = this.valor_consumido;
+   pessoa.valorConsumido = this.valor_consumido;
 
     //Adicionando objeto item ao array listaItens
     this.listaPessoa.push(pessoa)
