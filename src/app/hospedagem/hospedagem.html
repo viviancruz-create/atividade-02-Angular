@@ -1,0 +1,17 @@
+<div>
+    <h2>Cadastro de Hospedagem</h2>
+    <form id="formulario">
+        <label for="hospede">Hospede</label>
+        <input type="text" name="hospede" id="hospede">
+
+        <label for="valor_consumido">Valor Consumido</label>
+        <input type="number" name="valor_consumido" id="valor_consumido" [(ngModel)] ="valor_consumido" >
+
+        <div id="div-btns">
+            <button type="submit" id="btnAdd" (click) = "addPessoa()">Adicionar</button>
+            <button type="button" id="btnlimpar" (click) = "limparTudo" >Limpar</button>
+            <button></button>
+        </div>
+    </form>
+
+</div>
