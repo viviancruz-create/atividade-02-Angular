@@ -1,5 +1,5 @@
 export class Pessoa{
-    idHospede?: string
-    valorConsumido?: number
-    statusPessoa : boolean = false
+    hospede?: string;
+    valorConsumido?: number;
+    statusPessoa : boolean = false;
 }

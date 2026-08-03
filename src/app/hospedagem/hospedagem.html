@@ -1,17 +1,27 @@
-<div>
+<div id="div-from">
     <h2>Cadastro de Hospedagem</h2>
     <form id="formulario">
         <label for="hospede">Hospede</label>
-        <input type="text" name="hospede" id="hospede">
+        <input type="text" name="hospede" id="hospede" [(ngModel)]="hospede_hotel">
 
         <label for="valor_consumido">Valor Consumido</label>
-        <input type="number" name="valor_consumido" id="valor_consumido" [(ngModel)] ="valor_consumido" >
+        <input type="number" name="valor_consumido" id="valor_consumido" [(ngModel)]="valor_consumido" >
 
         <div id="div-btns">
-            <button type="submit" id="btnAdd" (click) = "addPessoa()">Adicionar</button>
-            <button type="button" id="btnlimpar" (click) = "limparTudo" >Limpar</button>
-            <button></button>
+            <button type="submit" id="btnAdd" (click)="addPessoa()">Adicionar</button>
+            <button type="button" id="btnlimpar" (click)="limparTudo()" >Limpar</button>
+            
         </div>
     </form>
+
+    <div id="div-listaPessoa" >
+        @for(elem of listaPessoa; track elem.hospede){
+            
+            <div class="div-pessoa">
+                {{elem.hospede}} -  R$ {{elem.valorConsumido?.toFixed (2)?.replace('.','.')}}</div>
+        }@empty{
+            <div class="div-pessoa">Nenhum Hospede adicionado!!!</div>
+        }  
+    </div>
 
 </div>
